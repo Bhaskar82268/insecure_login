@@ -8,7 +8,9 @@ if (isset($_POST['login'])) {
     $res = $conn->query("SELECT * FROM users_insecure WHERE username = '$username' AND password = '$password'");
     
     if ($res->num_rows > 0) {
-        echo "Login Successful (Insecure)";
+       $_SESSION['username'] = $username;
+         header("Location: dashboard.php");
+        exit();
     } else {
         echo "Invalid Credentials";
     }
