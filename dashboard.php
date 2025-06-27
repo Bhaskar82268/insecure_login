@@ -41,7 +41,7 @@ if (!isset($_SESSION['username'])) {
 <body>
     <div class="card">
         <h2>Welcome, <?php echo $_SESSION['username']; ?>!</h2>
-        <p>You have successfully logged in using the <strong>Secure Login</strong> system.</p>
+        <p>You have successfully logged in using the <strong>insecure Login</strong> system in which we can see exactly what your password is.</p>
         <a href="logout.php">Logout</a>
     </div>
 </body>
